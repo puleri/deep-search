@@ -1,0 +1,73 @@
+.glow-div {
+  pointer-events: all;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left:0;
+  right:0;
+  width:100%;
+  height: 100vh;
+  background-color: black ;
+}
+
+.homepage-link {
+  font-family: 'Assistant', sans-serif;
+  letter-spacing: 1px;
+  position: relative;
+  background: black;
+  text-decoration: none;
+  color: #86AFF5;
+  font-size: 1.75rem;
+  padding: 1.6rem 2.2rem;
+  border: .2rem solid #86AFF5;
+  border-radius: .5rem;
+  text-shadow: 0 0 10px #86AFF5;
+  box-shadow: 0 0 20px 4px #86AFF5, inset 0 0 20px 4px #86AFF5;
+
+  transition: background-color .3s ease-out;
+}
+.homepage-link::before {
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  background: #86AFF5;
+  top: 120%; left: 0;
+  width: 100%;
+  height: 100%;
+
+  transform: perspective(1em) rotateX(40deg) scale(1, .35);
+  filter: blur(1.5em);
+  opacity: .7;
+  transition: opacity .3s ease-out;
+}
+
+.homepage-link:hover::before {
+  opacity: 1;
+}
+
+.homepage-link:hover,
+.homepage-link:focus {
+  background-color: #86AFF5;
+  color: black;
+  text-shadow: none;
+}
+
+.homepage-link::after {
+  content: '';
+  color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  box-shadow: 0 0 4em .5em #86AFF5;
+  opacity: 0;
+  transition: opacity .3s ease-out;
+}
+
+.homepage-link:hover::after {
+  opacity:1;
+}

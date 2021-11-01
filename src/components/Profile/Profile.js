@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-export default function Welcome() {
+export default function Profile() {
   return (
     <div>
-      Welcome
+      Profile
     </div>
   )
 }

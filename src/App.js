@@ -7,7 +7,7 @@ import ISS from "./components/ISS/ISS.js";
 
 import firebase from './firebase';
 
-function App() {
+export default function App() {
   return (
     <div className="App">
 
@@ -30,5 +30,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

@@ -1,23 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import { Route } from 'react-router-dom';
+import Login from "./components/Login/Login.js";
+import Astro from "./components/Astro/Astro.js";
+import Profile from "./components/Profile/Profile.js";
+import ISS from "./components/ISS/ISS.js";
+
+import firebase from './firebase';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+        <Route
+        component={Login}
+        />
+
+        <Route
+        component={Astro}
+        />
+
+        <Route
+        component={Profile}
+        />
+
+        <Route
+        component={ISS}
+        />
+
     </div>
   );
 }

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 export default function Astro() {
 
-  const [astronauts, setAstronauts] = useState({
+  const [data, setData] = useState({
     message: 'pending',
     number: undefined,
     people: []
@@ -14,7 +14,7 @@ export default function Astro() {
        return res.json();
      })
       .then(data => {
-        setAstronauts({
+        setData({
           message: data.message,
           number: data.number,
           people: data.people
@@ -24,10 +24,21 @@ export default function Astro() {
 
    }, [])
 
+   const astroData = data.people;
+   const astroJSX =   astroData.map((person) => (
+     <div>
+       {person.craft},
+       {person.name}
+     </div>
+   ));
+
   return (
     <div>
+      <ul>
+      {astroJSX}
+      </ul>
       Astro
-      <button onClick={() => console.log(astronauts)}>Log</button>
+      <button onClick={() => console.log(data)}>Log</button>
     </div>
   )
 }

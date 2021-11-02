@@ -1,5 +1,6 @@
 import React from 'react';
 import './Login.css';
+import google from './google.png';
 import { firebase } from '../../firebase.js';
 
 
@@ -19,7 +20,7 @@ export default function Glow() {
     return (
       <div className="glow-div">
 
-          <button onClick={()=>signInWithFirebase()} className="homepage-link">Login</button>
+          <button onClick={()=>signInWithFirebase()} className="homepage-link"><img id="google" alt="google-icon" src={google} />Login with Google</button>
 
       </div>
     )

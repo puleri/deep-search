@@ -31,7 +31,7 @@ export default function App() {
 
 
               <Route
-              path="/astronaut"
+              path="/astronauts"
               component={Astro}
               />
 
@@ -46,6 +46,7 @@ export default function App() {
   } else {
     return (
       <Route
+      exact
       path="/"
       component={Login}
       />

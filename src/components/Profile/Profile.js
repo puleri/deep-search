@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
+import { firebase } from '../../firebase';
 
 export default function Profile() {
+
+  const signOut = () => {
+    firebase.auth().signOut();
+  }
+  
   return (
     <div>
-      Profile
+      <button onClick={signOut}>Log out</button>
     </div>
   )
 }

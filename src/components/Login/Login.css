@@ -1,3 +1,14 @@
+/* Login page CSS */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 1;
+}
+
+
+/* Button CSS */
 .glow-div {
   pointer-events: all;
   position: absolute;

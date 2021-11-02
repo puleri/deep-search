@@ -5,10 +5,7 @@ export default function Astro() {
   const [astronauts, setAstronauts] = useState({
     message: 'pending',
     number: undefined,
-    people: [{
-      craft: '',
-      name: ''
-    }]
+    people: []
    })
    useEffect(() => {
      const url = "http://api.open-notify.org/astros.json";
@@ -17,7 +14,12 @@ export default function Astro() {
        return res.json();
      })
       .then(data => {
-        console.log(data);
+        setAstronauts({
+          message: data.message,
+          number: data.number,
+          people: data.people
+        })
+        ;
       })
 
    }, [])
@@ -25,6 +27,7 @@ export default function Astro() {
   return (
     <div>
       Astro
+      <button onClick={() => console.log(astronauts)}>Log</button>
     </div>
   )
 }

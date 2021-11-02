@@ -10,7 +10,7 @@ const containerStyle = {
   alignItems: 'center',
   width: '400px',
   height: '400px',
-  borderRadius: "2px"
+  borderRadius: "14px"
 };
 
 
@@ -59,7 +59,6 @@ export default function Map(props) {
         >
         <img id="icon" src={icon} alt="ISS" />
       </GoogleMap>
-      <button onClick={() => console.log(API_KEY)}>Props</button>
 
 
 

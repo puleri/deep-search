@@ -27,7 +27,7 @@
   font-family: 'Assistant', sans-serif;
   letter-spacing: 1px;
   position: relative;
-  background: black;
+  background: transparent;
   text-decoration: none;
   color: #86AFF5;
   font-size: 1.75rem;
@@ -67,7 +67,7 @@
 
 .homepage-link::after {
   content: '';
-  color: black;
+  color: transparent;
   position: absolute;
   top: 0;
   left: 0;

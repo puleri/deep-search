@@ -9,11 +9,12 @@ const containerStyle = {
   justifyContent: 'center',
   alignItems: 'center',
   width: '400px',
-  height: '400px'
+  height: '400px',
+  borderRadius: "2px"
 };
 
 
-const API_KEY = "AIzaSyDTyHcsYYWtONkKEtvLnUXWZpGa3rhXZEY";
+const API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
 
 export default function Map(props) {
   const { isLoaded } = useJsApiLoader({

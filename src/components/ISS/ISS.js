@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import './ISS.css';
+import Map from '../Map/Map.js'
 
 export default function ISS() {
 
@@ -6,6 +8,7 @@ export default function ISS() {
     message: 'pending',
     timestamp: undefined,
     iss_position: {},
+
    })
 
    useEffect(() => {
@@ -27,7 +30,8 @@ export default function ISS() {
    const issData = data.iss_position;
 
   return (
-    <div>
+    <div className="iss-container">
+      <Map data={data} />
       <button onClick={()=> console.log(issData)}>Log</button>
       ISS
     </div>

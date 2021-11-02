@@ -1,9 +1,5 @@
-.map {
-  position: absolute;
-  top:0;
-  left: 200px;
-  outline: 1px solid red;
-  width: 400px;
-  height: 400px;
-  z-index: 4;
+#icon {
+  height: 40px;
+  width: 40px;
+  z-index: 2;
 }

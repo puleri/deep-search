@@ -1,19 +1,19 @@
 import React, { useState, useCallback } from 'react'
 import { Link } from 'react-router-dom';
+import icon from './icon.png';
 import './Map.css'
 import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 
 const containerStyle = {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
   width: '400px',
   height: '400px'
 };
 
-const center = {
-  lat: -3.745,
-  lng: -38.523
-};
 
-const API_KEY = process.env.GOOGLE_MAP_API_KEY;
+const API_KEY = "AIzaSyDTyHcsYYWtONkKEtvLnUXWZpGa3rhXZEY";
 
 export default function Map(props) {
   const { isLoaded } = useJsApiLoader({
@@ -23,7 +23,18 @@ export default function Map(props) {
 
   const [map, setMap] = useState(null)
 
-  const propData = props.data
+  function roundToTwo(num) {
+    return +(Math.round(num + "e+2")  + "e-2");
+  }
+  const propData = props.data.iss_position
+  const latitude = roundToTwo(propData.latitude)
+  const longitude = roundToTwo(propData.longitude)
+  const center = {
+    lat: latitude,
+    lng: longitude
+  };
+
+
 
   const onLoad = useCallback(function callback(map) {
     const bounds = new window.google.maps.LatLngBounds();
@@ -41,16 +52,20 @@ export default function Map(props) {
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={center}
-        zoom={10}
+        zoom={0}
         onLoad={onLoad}
         onUnmount={onUnmount}
         >
+        <img id="icon" src={icon} alt="ISS" />
       </GoogleMap>
+      <button onClick={() => console.log(API_KEY)}>Props</button>
 
-      <button onClick={() => console.log(props)}>Props</button>
+
 
     </div>
   ) : (
-    <></>
+    <>
+    <button onClick={() => console.log(API_KEY)}>Props</button>
+    </>
   )
 }

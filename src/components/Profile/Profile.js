@@ -33,7 +33,7 @@ export default function Profile() {
       <Navbar />
       <div className="content-wrapper">
         <img id="earth" src={earth} alt="rotating earth" />
-        <h1 id="welcome">Hi {firstName}. Ready to see who's in space?</h1>
+        <h1 id="welcome">Hi {firstName}. Ready to see what's in space?</h1>
       </div>
     </div>
   )

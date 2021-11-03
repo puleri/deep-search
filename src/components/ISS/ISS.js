@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './ISS.css';
 import Map from '../Map/Map.js'
 import Navbar from '../Navbar/Navbar.js';
@@ -32,9 +33,10 @@ export default function ISS() {
 
   return (
     <div className="iss-container">
-      <Navbar /> 
+      <Navbar />
+      <p className="info">The ISS travels a speed of 4.76 miles/second. Click <Link className="info" to="/iss">here</Link> for an update or here to <a className="info" href="https://en.wikipedia.org/wiki/International_Space_Station" rel="noreferrer" target="_blank">learn more</a>.</p>
       <div className="content-wrapper">
-        <h1 className="iss-header"><a target="_blank" rel="noreferrer" className="iss-header" href="https://en.wikipedia.org/wiki/International_Space_Station">International Space Station</a></h1>
+        <h1 className="iss-header">International Space Station</h1>
         <Map data={data} />
       </div>
     </div>

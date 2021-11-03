@@ -65,7 +65,6 @@ export default function Map(props) {
     </div>
   ) : (
     <>
-    <button onClick={() => console.log(API_KEY)}>Props</button>
     </>
   )
 }

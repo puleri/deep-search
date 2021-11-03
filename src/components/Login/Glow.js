@@ -20,7 +20,7 @@ export default function Glow() {
     return (
       <div className="glow-div">
 
-          <button onClick={()=>signInWithFirebase()} className="homepage-link"><img id="google" alt="google-icon" src={google} />Login with Google</button>
+          <button data-testid="Button" onClick={()=>signInWithFirebase()} className="homepage-link"><img id="google" alt="google-icon" src={google} />Login with Google</button>
 
       </div>
     )

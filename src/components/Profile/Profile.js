@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'
+import { Link, Router } from 'react-router-dom'
 import './Profile.css'
 import { firebase } from '../../firebase';
+import astro from './astronaut.png';
+import rocket from './rocket.png';
 
 export default function Profile() {
 
@@ -27,9 +29,18 @@ export default function Profile() {
 
   return (
     <div className="profile-container">
-      <h1 id="welcome">Hi {firstName}</h1>
-      <Link to="/astronauts">Astronauts</Link>
-      <button onClick={signOut}>Log out</button>
+      <div className="navbar-container">
+        <img id="nav-astro" src={astro} alt="astronaut-icon" />
+        <img id="nav-rocket" src={rocket} alt="astronaut-icon" />
+
+      </div>
+      <div className="content-wrapper">
+        <h1 id="welcome">Hi {firstName}</h1>
+
+        <Link data-testid="Link" to="/astronauts">Astronauts</Link>
+
+        <button onClick={signOut}>Log out</button>
+      </div>
     </div>
   )
 }

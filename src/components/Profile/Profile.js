@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../Navbar/Navbar.js';
 import { Link, Router } from 'react-router-dom'
+
+import earth from './earth.gif';
 import './Profile.css'
+
 import { firebase } from '../../firebase';
 
 export default function Profile() {
@@ -28,9 +31,9 @@ export default function Profile() {
     <div className="profile-container">
 
       <Navbar />
-
       <div className="content-wrapper">
-        <h1 id="welcome">Hi {firstName}</h1>
+        <img id="earth" src={earth} alt="rotating earth" />
+        <h1 id="welcome">Hi {firstName}. Ready to see who's in space?</h1>
       </div>
     </div>
   )

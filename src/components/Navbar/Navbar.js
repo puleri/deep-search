@@ -14,10 +14,25 @@ export default function Navbar() {
     }
   return (
     <div className="navbar-container">
-      <Link data-testid="Link" to="/"><img id="nav-home" src={home} alt="astronaut-icon" /></Link>
-      <Link data-testid="Link" to="/astronauts"><img id="nav-astro" src={astro} alt="astronaut-icon" /></Link>
-      <Link data-testid="Link" to="/iss"><img id="nav-iss" src={iss} alt="iss-icon" /></Link>
-      <button onClick={signOut}><img id="nav-rocket" src={rocket} alt="astronaut-icon" /></button>
+      <div className="nav-item">
+        <Link data-testid="Link" to="/"><img id="nav-home" src={home} alt="astronaut-icon" /></Link>
+        <p className="item-label">Home</p>
+      </div>
+
+      <div className="nav-item">
+        <Link data-testid="Link" to="/astronauts"><img id="nav-astro" src={astro} alt="astronaut-icon" /></Link>
+        <p className="item-label">Atronauts</p>
+      </div>
+
+      <div className="nav-item">
+        <Link data-testid="Link" to="/iss"><img id="nav-iss" src={iss} alt="iss-icon" /></Link>
+        <p className="item-label">ISS Locator</p>
+      </div>
+
+      <div className="nav-item">
+        <button onClick={signOut}><img id="nav-rocket" src={rocket} alt="astronaut-icon" /></button>
+        <p className="item-label">Log off</p>
+      </div>
     </div>
   )
 }

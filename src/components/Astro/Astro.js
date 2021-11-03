@@ -36,10 +36,12 @@ export default function Astro() {
   return (
     <div className="astro-container">
       <Navbar />
-      <h1 id="astro-header">Astronauts in space</h1>
-      <ul className="astro-list">
-      {astroJSX}
-      </ul>
+      <div className="content-wrapper">
+        <h1 id="astro-header">Astronauts in space</h1>
+        <ul className="astro-list">
+        {astroJSX}
+        </ul>
+      </div>
     </div>
   )
 }

@@ -24,3 +24,30 @@
   width: 25px;
   filter: invert();
 }
+
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.nav-item:hover {
+  margin-top: -10px;
+  cursor: pointer;
+}
+.item-label {
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  width: 80px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin: 0;
+  height: 53px;
+  z-index: -3;
+  color: white;
+  font-weight: lighter;
+}

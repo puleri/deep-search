@@ -34,8 +34,8 @@ export default function ISS() {
   return (
     <div className="iss-container">
       <Navbar />
-      <p className="info">The ISS travels a speed of 4.76 miles/second. Click <Link className="info" to="/iss">here</Link> for an update or here to <a className="info" href="https://en.wikipedia.org/wiki/International_Space_Station" rel="noreferrer" target="_blank">learn more</a>.</p>
       <div className="content-wrapper">
+        <p className="info">The ISS travels a speed of 4.76 miles/second. Click <Link className="info" to="/iss">here</Link> for an update or here to <a className="info" href="https://en.wikipedia.org/wiki/International_Space_Station" rel="noreferrer" target="_blank">learn more</a>.</p>
         <h1 className="iss-header">International Space Station</h1>
         <Map data={data} />
       </div>

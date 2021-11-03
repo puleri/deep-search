@@ -31,8 +31,8 @@ export default function Map(props) {
     return +(Math.round(num + "e+2")  + "e-2");
   }
   const propData = props.data.iss_position
-  const latitude = roundToTwo(propData.latitude)
-  const longitude = roundToTwo(propData.longitude)
+  const latitude = parseFloat(roundToTwo(propData.latitude))
+  const longitude = parseFloat(roundToTwo(propData.longitude))
   const center = {
     lat: latitude,
     lng: longitude

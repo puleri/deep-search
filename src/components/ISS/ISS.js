@@ -32,9 +32,9 @@ export default function ISS() {
 
   return (
     <div className="iss-container">
-      <Navbar />
+      <Navbar /> 
       <div className="content-wrapper">
-        <h1 className="iss-header"><a className="iss-header" href="https://en.wikipedia.org/wiki/International_Space_Station">International Space Station</a></h1>
+        <h1 className="iss-header"><a target="_blank" rel="noreferrer" className="iss-header" href="https://en.wikipedia.org/wiki/International_Space_Station">International Space Station</a></h1>
         <Map data={data} />
       </div>
     </div>

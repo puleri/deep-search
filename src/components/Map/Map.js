@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react'
+import React, { useEffect, useState, useCallback } from 'react'
 import icon from './iss.png';
 import './Map.css'
 import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
@@ -22,6 +22,10 @@ export default function Map(props) {
   })
 
   const [map, setMap] = useState(null)
+
+  useEffect(() => {
+
+  }, [])
 
   function roundToTwo(num) {
     return +(Math.round(num + "e+2")  + "e-2");
@@ -56,7 +60,10 @@ export default function Map(props) {
         onUnmount={onUnmount}
         zoom={1}
         >
-        <img id="icon" src={icon} alt="ISS" />
+        <img
+        lat={latitude}
+        lng={longitude}
+        id="icon" src={icon} alt="ISS" />
       </GoogleMap>
 
     </div>

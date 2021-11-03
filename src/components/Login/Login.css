@@ -24,6 +24,14 @@
   margin-top: -10px;
   margin-bottom: -10px;
 }
+@media (max-width: 600px) {
+  #landing-heading {
+    font-size: 70px;
+  }
+  .header-wrapper {
+    width: 400px;
+  }
+}
 #landing-sub {
   color: white;
   font-weight: lighter;

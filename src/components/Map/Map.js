@@ -1,6 +1,5 @@
 import React, { useState, useCallback } from 'react'
-import { Link } from 'react-router-dom';
-import icon from './icon.png';
+import icon from './iss.png';
 import './Map.css'
 import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 
@@ -53,14 +52,12 @@ export default function Map(props) {
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={center}
-        zoom={0}
         onLoad={onLoad}
         onUnmount={onUnmount}
+        zoom={1}
         >
         <img id="icon" src={icon} alt="ISS" />
       </GoogleMap>
-
-
 
     </div>
   ) : (

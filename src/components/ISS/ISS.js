@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './ISS.css';
 import Map from '../Map/Map.js'
+import Navbar from '../Navbar/Navbar.js';
 
 export default function ISS() {
 
@@ -31,9 +32,11 @@ export default function ISS() {
 
   return (
     <div className="iss-container">
-      <Map data={data} />
-      <button onClick={()=> console.log(issData)}>Log</button>
-      ISS
+      <Navbar />
+      <div className="content-wrapper">
+        <h1><a id="iss-header" href="https://en.wikipedia.org/wiki/International_Space_Station">International Space Station</a></h1>
+        <Map data={data} />
+      </div>
     </div>
   )
 }

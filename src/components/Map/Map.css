@@ -1,5 +1,5 @@
 #icon {
-  height: 40px;
-  width: 40px;
+  filter: contrast(1.5) grayscale(1) brightness(2);
+  width: 100px;
   z-index: 2;
 }

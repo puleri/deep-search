@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import Navbar from '../Navbar/Navbar.js';
+import './Astro.css';
 
 export default function Astro() {
 
@@ -26,19 +28,18 @@ export default function Astro() {
 
    const astroData = data.people;
    const astroJSX =   astroData.map((person) => (
-     <div>
-       {person.craft},
-       {person.name}
+     <div className="list-item">
+       <b>{person.name}</b> in the {person.craft} spacecraft
      </div>
    ));
 
   return (
-    <div>
-      <ul>
+    <div className="astro-container">
+      <Navbar />
+      <h1 id="astro-header">Astronauts in space</h1>
+      <ul className="astro-list">
       {astroJSX}
       </ul>
-      Astro
-      <button onClick={() => console.log(data)}>Log</button>
     </div>
   )
 }

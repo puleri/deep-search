@@ -1,5 +1,5 @@
 import './App.css';
-import { Route } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 import Login from "./components/Login/Login.js";
 import Astro from "./components/Astro/Astro.js";
 import Profile from "./components/Profile/Profile.js";
@@ -22,35 +22,33 @@ export default function App() {
 
   if (isUserSignedIn) {
     return (
-      <div className="App">
-              <Route
-              exact
-              path="/"
-              component={Profile}
-              />
+      <div className="App">        
+        <Route
+        exact
+        path="/"
+        component={Profile}
+        />
 
+        <Route
+        path="/astronauts"
+        component={Astro}
+        />
 
-              <Route
-              path="/astronauts"
-              component={Astro}
-              />
-
-
-
-              <Route
-              path="/ISS"
-              component={ISS}
-              />
-        </div>
+        <Route
+        path="/iss"
+        component={ISS}
+        />
+      </div>
     )
   } else {
     return (
+      <>
+      <Redirect to="/"/>
       <Route
-      exact
       path="/"
       component={Login}
       />
-
+      </>
     )
   }
 }

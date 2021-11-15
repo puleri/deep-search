@@ -55,8 +55,8 @@ export default function Map(props) {
 
       <GoogleMap
         mapContainerStyle={containerStyle}
-        center={center}
         onLoad={onLoad}
+        center={center}
         onUnmount={onUnmount}
         zoom={1}
         >
